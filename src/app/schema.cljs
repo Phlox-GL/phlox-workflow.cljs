@@ -1,4 +1,4 @@
 
-(ns phlox.schema )
+(ns app.schema )
 
 (def store {:tab :drafts, :x 0})

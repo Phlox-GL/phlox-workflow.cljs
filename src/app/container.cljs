@@ -1,5 +1,5 @@
 
-(ns phlox.container
+(ns app.container
   (:require [phlox.core :refer [defcomp rect circle text container graphics create-list]]
             [phlox.util :refer [hslx]]))
 
