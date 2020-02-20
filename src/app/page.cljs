@@ -15,7 +15,7 @@
    ""
    (merge
     base-info
-    {:styles [(<< "http://~(get-ip!):8100/main.css")],
+    {:styles [(<< "http://~(get-ip!):8100/main-fonts.css")],
      :scripts ["/client.js"],
      :inline-styles [(slurp "./entry/main.css")]})))
 
