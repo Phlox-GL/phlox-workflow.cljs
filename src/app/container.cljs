@@ -5,6 +5,7 @@
 (defcomp
  comp-container
  (store)
- (container
-  {}
-  (text {:text "DEMO", :style {:fill (hslx 240 80 80), :font-family "Josefin Sans"}})))
+ (let [states (:states store), cursor []]
+   (container
+    {}
+    (text {:text "DEMO", :style {:fill (hslx 240 80 80), :font-family "Josefin Sans"}}))))
