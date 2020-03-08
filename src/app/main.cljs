@@ -6,7 +6,8 @@
             [app.container :refer [comp-container]]
             [app.schema :as schema]
             [app.config :refer [dev?]]
-            [app.updater :refer [updater]]))
+            [app.updater :refer [updater]]
+            ["fontfaceobserver" :as FontFaceObserver]))
 
 (defonce *store (atom schema/store))
 
@@ -18,9 +19,13 @@
      (let [op-id (shortid/generate), op-time (.now js/Date)]
        (reset! *store (updater @*store op op-data op-id op-time))))))
 
+(def global-fonts
+  (js/Promise.all
+   (array (.load (FontFaceObserver. "Josefin Sans")) (.load (FontFaceObserver. "Hind")))))
+
 (defn main! []
   (comment js/console.log PIXI)
-  (render! (comp-container @*store) dispatch! {})
+  (-> global-fonts (.then (fn [] (render! (comp-container @*store) dispatch! {}))))
   (add-watch *store :change (fn [] (render! (comp-container @*store) dispatch! {})))
   (println "App Started"))
 
