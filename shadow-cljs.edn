@@ -3,10 +3,10 @@
   :cache-blockers #{cumulo-util.build}
   :dependencies [
     [mvc-works/hsl "0.1.2"]
-    [mvc-works/shell-page "0.1.14"]
+    [mvc-works/shell-page "0.1.15"]
     [cumulo/util "0.1.12"]
-    [respo "0.12.3"]
-    [quamolit/phlox "0.3.3"]
+    [respo "0.13.0"]
+    [quamolit/phlox "0.3.4"]
     [org.clojure/core.incubator "0.1.4"]
   ]
   :open-file-command [
