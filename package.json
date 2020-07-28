@@ -18,7 +18,7 @@
   "author": "jiyinyiyong",
   "license": "MIT",
   "devDependencies": {
-    "shadow-cljs": "^2.10.15"
+    "shadow-cljs": "^2.10.17"
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
