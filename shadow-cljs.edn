@@ -5,7 +5,7 @@
     [mvc-works/hsl "0.1.2"]
     [mvc-works/shell-page "0.1.15"]
     [cumulo/util "0.1.12"]
-    [respo "0.13.0"]
+    [respo "0.13.3"]
     [quamolit/phlox "0.3.4"]
     [org.clojure/core.incubator "0.1.4"]
   ]
